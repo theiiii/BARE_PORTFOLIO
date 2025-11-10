@@ -1,0 +1,1015 @@
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ADE8F4;
+}
+
+/* Anonymous Pro Font Styles */
+.anonymous-pro-regular {
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.anonymous-pro-bold {
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.anonymous-pro-regular-italic {
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.anonymous-pro-bold-italic {
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* navbar styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b3e5fc;
+    padding: 0 50px;
+    height: 100px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+/* navbar logo  */
+.navbar img {
+    width: 250px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* menu list */
+.navbar ul {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a {
+    color: #000;
+    text-decoration: none;
+    font-family: "Anonymous Pro", monospace;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    background-color: #03045E;
+    color: #fff;
+}
+
+/* navbar responsiveness */
+/* ✅ BASE PROVIDED CODE — KEEP YOUR ORIGINAL */
+
+/* ✅ MAKE NAV RESPONSIVE */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 0 20px;
+        height: auto;
+    }
+
+    .navbar img {
+        width: 200px;
+        height: 40px;
+    }
+
+    .navbar ul {
+        gap: 25px;
+    }
+
+    .navbar ul li a {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+}
+
+/* ✅ MOBILE VIEW */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .navbar img {
+        margin-bottom: 15px;
+        width: 180px;
+        height: 40px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 18px;
+        width: 100%;
+        display: inline-block;
+    }
+}
+
+/* ✅ EXTRA SMALL SCREEN */
+@media (max-width: 480px) {
+    .navbar img {
+        width: 150px;
+        height: 30px;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+}
+
+/* projects styles */
+.projects {
+    font-family: "Anonymous Pro", monospace;
+    color: white;
+    border-radius: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.projects-title {
+    font-weight: 700;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+/* Project container layout */
+.projectset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Each project box */
+.projectset > div {
+    background: #001F54;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    flex: 1 1 400px; /* responsive sizing */
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectset > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* projectset img */
+.superpet-img, .coffeeshop-img, .bytequiz-img, .ecobloom-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* some adjustments on projectset divs */
+.coffeeshop img {
+    display: block; 
+    margin: 25px auto; 
+}
+
+.bytequiz img {
+    display: block; 
+    margin: 30px auto; 
+}
+
+.ecobloom img {
+    display: block; 
+    margin: 10px auto; 
+}
+
+/* clickable divs to show details */
+.projectset > div {
+    cursor: pointer;
+}
+
+/* shows / hides project details */
+.project-details {
+  display: none;
+}
+
+.project-details.active {
+  display: block;
+}
+
+.project-details p.project-title {
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 700;
+  font-size: 30px;
+  color:#03045E;
+  margin: 10px;
+}
+
+.project-details p.project-description {
+  font-family: "Anonymous Pro", monospace;
+  font-size: 18px;
+  color:#03045E;
+  margin: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.title-row {
+    margin-bottom: 20px;
+    justify-content: center; /* centers the title and buttons */
+}
+
+.title-row .tech-buttons button {
+    background: #0077B6;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.title-row .tech-buttons button:hover {
+    background: #03045E;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* div details bg  */
+.superpet-details-img, .coffeeshop-details-img, .bytequiz-details-img, .ecobloom-details-img {
+    background-color: #03045E;
+}
+
+/* img header details div when toggled */
+.superpet-main {
+    width: 60%;
+    display: block; /* centers the image */
+    margin: 50px auto; /* centers the image */
+    padding: 40px;
+}
+
+.coffeeshop-main {
+    width: 60%;
+    display: block; /* centers the image */
+    margin: 50px auto; /* centers the image */
+    padding: 40px;
+}
+
+.bytequiz-main {
+    width: 60%;
+    display: block; /* centers the image */
+    margin: 50px auto; /* centers the image */
+    padding: 40px;
+}
+
+.ecobloom-main {
+    width: 60%;
+    display: block; /* centers the image */
+    margin: 50px auto; /* centers the image */
+    padding: 40px;
+}
+
+.superpet-details button, .coffeeshop-details button, .bytequiz-details button, .ecobloom-details button {
+    font-family: "Anonymous Pro", monospace;
+    background: #0077B6;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 6px 12px;
+    margin: 4px;
+    font-size: 13px;
+    cursor: default;
+    transition: background 0.2s ease;
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between title and buttons */
+    flex-wrap: wrap; /* allow wrapping on smaller screens */
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.tech-buttons button {
+    margin: 0 5px;
+}
+
+/* superpet toggle styles img */
+.superpet-signin .superpet-signin-img {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 20px;
+    gap: 30px;
+}
+
+.superpet-signin .superpet-signin-img img {
+    width: 50%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.superpet-signin .superpet-signin-img-label {
+    text-align: center;
+    font-family: "Anonymous Pro", monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: #03045E;
+}
+
+.superpet-homepage .superpet-homepage-img {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 20px;
+}
+
+.superpet-homepage .superpet-homepage-img img {
+    width: 30%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.superpet-homepage .superpet-homepage-img-label {
+    text-align: center;
+    font-family: "Anonymous Pro", monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: #03045E;
+}
+
+.superpet-tabs .tabs-img {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  justify-items: center; /* center images horizontally */
+  align-items: center; /* center vertically */
+  padding: 50px;
+    padding-bottom: 10px;
+  gap: 20px;
+}
+
+.superpet-tabs .tabs-img img {
+    width: 100%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+/* for horizontal alignment of labels */
+.tabs-label {
+    font-family: "Anonymous Pro", monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: #03045E;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+
+.superpet-cart .superpet-cart-img {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 20px;
+}
+
+.superpet-cart .superpet-cart-img img {
+    width: 50%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.superpet-cart .superpet-cart-img-label {
+    text-align: center;
+    font-family: "Anonymous Pro", monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: #03045E;
+}
+
+/* superpet animation */
+/* reveal base (hidden) */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 600ms ease-out, transform 600ms ease-out;
+  will-change: opacity, transform;
+}
+
+/* reveal visible */
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* coffeeshop toggle styles img */
+.coffeeshop-allproducts .coffeeshop-allproducts-img {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 20px;
+}
+
+.coffeeshop-allproducts .coffeeshop-allproducts-img img {
+    width: 70%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.coffeeshop-allproducts .coffeeshop-allproducts-img-label {
+    text-align: center;
+    font-family: "Anonymous Pro", monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: #03045E;
+}
+
+.coffeeshop-favorites .coffeeshop-favorites-img {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 20px;
+}
+
+.coffeeshop-favorites .coffeeshop-favorites-img img {
+    width: 70%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.coffeeshop-favorites .coffeeshop-favorites-img-label {
+    text-align: center;
+    font-family: "Anonymous Pro", monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: #03045E;
+}
+
+.coffeeshop-beveragepastries .coffeeshop-beveragepastries-img {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 10px;
+    gap: 20px;
+}
+
+.coffeeshop-beveragepastries .coffeeshop-beveragepastries-img img {
+    width: 50%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.coffeeshop-dessert .coffeeshop-dessert-img {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 20px;
+}
+
+.coffeeshop-dessert .coffeeshop-dessert-img img {
+    width: 70%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.coffeeshop-dessert .coffeeshop-dessert-img-label {
+    text-align: center;
+    font-family: "Anonymous Pro", monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: #03045E;
+}
+
+.coffeeshop-cart .coffeeshop-cart-img {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 20px;
+}
+
+.coffeeshop-cart .coffeeshop-cart-img img {
+    width: 70%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.coffeeshop-cart .coffeeshop-cart-img-label {
+    text-align: center;
+    font-family: "Anonymous Pro", monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: #03045E;
+}
+
+/* bytequiz toggle styles img */
+.bytequiz-mainmenu .bytequiz-mainmenu-img {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 20px;
+}
+
+.bytequiz-mainmenu .bytequiz-mainmenu-img img {
+    width: 70%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.bytequiz-mainmenu .bytequiz-mainmenu-img-label {
+    text-align: center;
+    font-family: "Anonymous Pro", monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: #03045E;
+}
+
+.bytequiz-create-classroom .bytequiz-create-classroom-img {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 10px;
+    gap: 20px;
+}
+
+.bytequiz-create-classroom .bytequiz-create-classroom-img img {
+    width: 50%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.bytequiz-saved-leaderboards .bytequiz-saved-leaderboards-img {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 10px;
+    gap: 20px;
+}
+
+.bytequiz-saved-leaderboards .bytequiz-saved-leaderboards-img img {
+    width: 50%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+/* for 3 grid img align horizontal */
+.bytequiz-crib .bytequiz-crib-img {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  justify-items: center; /* center images horizontally */
+  align-items: center; /* center vertically */
+  padding: 50px;
+  padding-bottom: 5px;
+  gap: 20px;
+}
+
+.bytequiz-crib .bytequiz-crib-img img {
+    width: 100%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.bytequiz-crib-expanded .bytequiz-crib-expanded-img {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  justify-items: center; /* center images horizontally */
+  align-items: center; /* center vertically */
+  padding: 50px;
+  padding-bottom: 5px;
+  gap: 20px;
+}
+
+.bytequiz-crib-expanded .bytequiz-crib-expanded-img img {
+    width: 100%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.bytequiz-characterprofile .bytequiz-characterprofile-img {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 20px;
+}
+
+.bytequiz-characterprofile .bytequiz-characterprofile-img img {
+    width: 70%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.bytequiz-characterprofile .bytequiz-characterprofile-img-label {
+    text-align: center;
+    font-family: "Anonymous Pro", monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: #03045E;
+}
+
+.bytequiz-multiplayer-lobby .bytequiz-multiplayer-lobby-img {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 10px;
+    gap: 20px;
+}
+
+.bytequiz-multiplayer-lobby .bytequiz-multiplayer-lobby-img img {
+    width: 50%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.bytequiz-minigames .bytequiz-minigames-img {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  justify-items: center; /* center images horizontally */
+  align-items: center; /* center vertically */
+  padding: 50px;
+    padding-bottom: 10px;
+  gap: 20px;
+}
+
+.bytequiz-minigames .bytequiz-minigames-img img {
+    width: 100%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.bytequiz-webpage .bytequiz-webpage-img {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 20px;
+}
+
+.bytequiz-webpage .bytequiz-webpage-img img {
+    width: 70%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.bytequiz-webpage .bytequiz-webpage-img-label {
+    text-align: center;
+    font-family: "Anonymous Pro", monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: #03045E;
+}
+
+.bytequiz-signin-teacher .bytequiz-signin-teacher-img {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 20px;
+    gap: 20px;
+}
+
+.bytequiz-signin-teacher .bytequiz-signin-teacher-img img {
+    width: 50%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.bytequiz-signin-teacher .bytequiz-signin-teacher-img-label {
+    text-align: center;
+    font-family: "Anonymous Pro", monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: #03045E;
+}
+
+.bytequiz-classroom .bytequiz-classroom-img {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  justify-items: center; /* center images horizontally */
+  align-items: center; /* center vertically */
+  padding: 50px;
+    padding-bottom: 10px;
+  gap: 20px;
+}
+
+.bytequiz-classroom .bytequiz-classroom-img img {
+    width: 100%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+/* ecobloom toggle styles img */
+.ecobloom-homepage .ecobloom-homepage-img {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 20px;
+    gap: 20px;
+}
+
+.ecobloom-homepage .ecobloom-homepage-img img {
+    width: 50%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.ecobloom-homepage .ecobloom-homepage-img-label {
+    text-align: center;
+    font-family: "Anonymous Pro", monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: #03045E;
+}
+
+.ecobloom-aboutpage .ecobloom-aboutpage-img {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 20px;
+    gap: 20px;
+}
+
+.ecobloom-aboutpage .ecobloom-aboutpage-img img {
+    width: 50%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.ecobloom-aboutpage .ecobloom-aboutpage-img-label {
+    text-align: center;
+    font-family: "Anonymous Pro", monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: #03045E;
+}
+
+.ecobloom-shoppage .ecobloom-shoppage-img {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 20px;
+}
+
+.ecobloom-shoppage .ecobloom-shoppage-img img {
+    width: 70%;
+    margin: 0 auto; /* margin auto 0 */
+}
+
+.ecobloom-shoppage .ecobloom-shoppage-img-label {
+    text-align: center;
+    font-family: "Anonymous Pro", monospace;
+    font-style: italic;
+    font-size: 20px;
+    color: #03045E;
+}
+
+/* ============================
+   RESPONSIVE (MOBILE-FIRST)
+============================ */
+
+/* MOBILE — default behavior works fine, but tweak image grids */
+@media (max-width: 768px) {
+
+    .projectset > div {
+        flex: 1 1 100%;
+        max-width: 90%;
+    }
+
+    .superpet-main,
+    .coffeeshop-main,
+    .bytequiz-main,
+    .ecobloom-main {
+        width: 90%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .title-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tech-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    /* Img layout fixes */
+    .superpet-signin-img,
+    .coffeeshop-beveragepastries-img,
+    .bytequiz-create-classroom-img,
+    .bytequiz-saved-leaderboards-img,
+    .bytequiz-multiplayer-lobby-img {
+        flex-direction: column;
+    }
+
+    .superpet-signin-img img,
+    .coffeeshop-favorites-img img,
+    .bytequiz-mainmenu-img img,
+    .bytequiz-characterprofile-img img {
+        width: 90%;
+    }
+
+    .superpet-homepage-img img {
+        width: 70%;
+    }
+
+    /* Grid → column */
+    .superpet-tabs .tabs-img,
+    .bytequiz-crib-img,
+    .bytequiz-crib-expanded-img,
+    .bytequiz-minigames-img {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tabs-label {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer .icons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* SMALL TABLET */
+@media (max-width: 1024px) {
+
+    .projectset > div {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+
+    .superpet-main,
+    .coffeeshop-main,
+    .bytequiz-main,
+    .ecobloom-main {
+        width: 80%;
+    }
+
+    .tabs-img {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bytequiz-crib-img,
+    .bytequiz-crib-expanded-img,
+    .bytequiz-minigames-img {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* LARGE SCREENS */
+@media (min-width: 1201px) {
+    .projectset {
+        max-width: 1200px;
+    }
+}
+
+/* footer styles */
+footer {
+    font-family: "Anonymous Pro", monospace;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* allows stacking on smaller screens */
+    background-color: #001F54;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footerlogo {
+    width: 120px;
+    height: auto;
+}
+
+/* Text section */
+footer p {
+    flex: 1;
+    margin: 10px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Icons container */
+.icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.icon img:hover {
+    transform: scale(1.1);
+}
+
+/* footer responsiveness */
+/* ===============================
+   ✅ FOOTER RESPONSIVENESS
+   ===============================*/
+
+/* Tablets */
+@media (max-width: 1024px) {
+    footer {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .footerlogo {
+        width: 110px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    .icon img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Large Phones */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footerlogo {
+        width: 100px;
+    }
+
+    .icons {
+        gap: 12px;
+    }
+
+    .icon img {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+/* Smaller Phones */
+@media (max-width: 576px) {
+    footer {
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .footerlogo {
+        width: 90px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    .icons {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .icon img {
+        width: 24px;
+        height: 24px;
+    }
+}
